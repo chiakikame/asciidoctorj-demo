@@ -1,0 +1,16 @@
+= Asciidoctorj demo
+
+This program demos how to use `asciidoctorj` to convert asciidoc file / fragment into
+html string.
+
+== One-jar archiving this project
+
+While using `gradle-one-jar`, I encountered an error. (Sorry for not recording it T_T )
+The reason of failing, as I guessed, may be caused by it's behaviour of archiving all
+jars directly and load required classes with a custom class loader.
+
+Why this project is so special? I think it's related of `jruby` dependency.
+
+Then I found this `gradle-shadow` plugin, which decompresses all jar dependencies and then
+recompress them into a new jar (instead of archiving jar dependencies directly). This design
+causes no problem now, as you may see with my project.

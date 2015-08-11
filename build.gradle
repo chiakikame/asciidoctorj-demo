@@ -1,0 +1,30 @@
+group 'org.thousandturtles'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.2'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.asciidoctor:asciidoctorj:1.5.2'
+    compile 'org.slf4j:slf4j-simple:1.7.12'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.thousandturtles.asciidoctorj_demo.Main'
+    }
+}
