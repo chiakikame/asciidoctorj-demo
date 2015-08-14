@@ -28,3 +28,9 @@ jar {
         attributes 'Main-Class': 'org.thousandturtles.asciidoctorj_demo.Main'
     }
 }
+
+task collect(type: Copy, dependsOn: 'build') {
+    into "$buildDir/output/lib"
+    from configurations.runtime
+    from jar
+}
