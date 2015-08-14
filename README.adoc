@@ -19,3 +19,7 @@ causes no problem now, as you may see with my project.
 
 In this new version, a simple gradle task was added to collect all
 dependencies into a single folder for another way of distribution.
+
+If this method should be applied to a multi-project settings, use
+`subprojects.jar` and `subprojects.configurations.runtime` instead.
+(refered http://stackoverflow.com/questions/24868668/copy-all-created-third-party-jars-into-a-single-folder-with-gradle)
