@@ -14,3 +14,8 @@ Why this project is so special? I think it's related of `jruby` dependency.
 Then I found this `gradle-shadow` plugin, which decompresses all jar dependencies and then
 recompress them into a new jar (instead of archiving jar dependencies directly). This design
 causes no problem now, as you may see with my project.
+
+== Collecting all dependency jars into a directory
+
+In this new version, a simple gradle task was added to collect all
+dependencies into a single folder for another way of distribution.
